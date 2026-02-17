@@ -1,21 +1,24 @@
 /**
  * OOPS Banner App
- * UC2: Render OOPS as Banner using Print Statements
- * Goal: Display "OOPS" in a large banner made from spaces and '*'
- * @author Technical Team
- * @version 1.0
+ * UC4: Render OOPS as Banner using Arrays and Loops
+ * Goal: Improve modularity by storing banner lines in a String array
  */
-
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  *****      *****      ******      *****  ");
-        System.out.println(" *     *    *     *    *      *    *     * ");
-        System.out.println(" *     *    *     *    *      *    *       ");
-        System.out.println(" *     *    *     *    ******      *****   ");
-        System.out.println(" *     *    *     *    *                *  ");
-        System.out.println(" *     *    *     *    *                *  ");
-        System.out.println("  *****      *****      *          *****   ");
+        String[] banner = new String[7];
+
+        banner[0] = "  *****     *****    *******    ****** ";
+        banner[1] = " *     *   *     *   *      *  *      *";
+        banner[2] = " *     *   *     *   *      *  *       ";
+        banner[3] = " *     *   *     *   *******    ******  ";
+        banner[4] = " *     *   *     *   *          *      *";
+        banner[5] = " *     *   *     *   *          *      *";
+        banner[6] = "  *****     *****    *           ****** ";
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
