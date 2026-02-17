@@ -1,5 +1,8 @@
 /**
  * OOPS Banner App
+ * UC3: Render OOPS as Banner using String.join()
+ * Goal: Improve memory efficiency by replacing + operator
+ * @author DrCatnip
  * UC2: Render OOPS as Banner using Print Statements
  * Goal: Display "OOPS" in a large banner made from spaces and '*'
  * @author Technical Team
@@ -10,6 +13,61 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
+        // Line 1
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                " ****** ",
+                "  ***** "
+        ));
+
+        // Line 2
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*     * "
+        ));
+
+        // Line 3
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*       "
+        ));
+
+        // Line 4
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                " ****** ",
+                "  ***** "
+        ));
+
+        // Line 5
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*       ",
+                "       *"
+        ));
+
+        // Line 6
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*       ",
+                "*     * "
+        ));
+
+        // Line 7
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                "*       ",
+                "  ***** "
+        ));
         System.out.println("  *****      *****      ******      *****  ");
         System.out.println(" *     *    *     *    *      *    *     * ");
         System.out.println(" *     *    *     *    *      *    *       ");
