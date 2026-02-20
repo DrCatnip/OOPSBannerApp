@@ -1,87 +1,25 @@
 /**
  * OOPS Banner App
- * UC4: Render OOPS as Banner using Arrays and Loops
- * Goal: Improve modularity by storing banner lines in a String array
- * UC3: Render OOPS as Banner using String.join()
- * Goal: Improve memory efficiency by replacing + operator
- * @author DrCatnip
- * UC2: Render OOPS as Banner using Print Statements
- * Goal: Display "OOPS" in a large banner made from spaces and '*'
+ * UC1 → UC5 Combined Version
  * @author Technical Team
  * @version 1.0
  */
+
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] banner = new String[7];
+        // =========================
+        // UC1: Simple Print
+        // =========================
+        System.out.println("UC1 Output:");
+        System.out.println("OOPS");
+        System.out.println();
 
-        banner[0] = "  *****     *****    *******    ****** ";
-        banner[1] = " *     *   *     *   *      *  *      *";
-        banner[2] = " *     *   *     *   *      *  *       ";
-        banner[3] = " *     *   *     *   *******    ******  ";
-        banner[4] = " *     *   *     *   *          *      *";
-        banner[5] = " *     *   *     *   *          *      *";
-        banner[6] = "  *****     *****    *           ****** ";
-
-        for (String line : banner) {
-            System.out.println(line);
-        }
-        // Line 1
-        System.out.println(String.join(" ",
-                " *****  ",
-                " *****  ",
-                " ****** ",
-                "  ***** "
-        ));
-
-        // Line 2
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*     * "
-        ));
-
-        // Line 3
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*       "
-        ));
-
-        // Line 4
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                " ****** ",
-                "  ***** "
-        ));
-
-        // Line 5
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "       *"
-        ));
-
-        // Line 6
-        System.out.println(String.join(" ",
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "*     * "
-        ));
-
-        // Line 7
-        System.out.println(String.join(" ",
-                " *****  ",
-                " *****  ",
-                "*       ",
-                "  ***** "
-        ));
+        // =========================
+        // UC2: Print Statements
+        // =========================
+        System.out.println("UC2 Output:");
         System.out.println("  *****      *****      ******      *****  ");
         System.out.println(" *     *    *     *    *      *    *     * ");
         System.out.println(" *     *    *     *    *      *    *       ");
@@ -89,22 +27,137 @@ public class OOPSBannerApp {
         System.out.println(" *     *    *     *    *                *  ");
         System.out.println(" *     *    *     *    *                *  ");
         System.out.println("  *****      *****      *          *****   ");
-    }
-}
- * UC1: Print OOPS to Console
- * * Goal: Display the literal text "OOPS" (Object-Oriented Programming System) 
- * once on the console.
- * * @author Technical Team
- * @version 1.0
- */
-public class OOPSBannerApp {
+        System.out.println();
 
-    /**
-     * Main method - Entry point of the application.
-     * @param args Command line arguments
-     */
-    public static void main(String[] args) {
-        // UC1: Simple print statement using String Literal
-        System.out.println("OOPS");
+        // =========================
+        // UC3: Using String.join()
+        // =========================
+        System.out.println("UC3 Output:");
+
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                " ****** ",
+                "  ***** "
+        ));
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*     * "
+        ));
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*       "
+        ));
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                " ****** ",
+                "  ***** "
+        ));
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*       ",
+                "       *"
+        ));
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*       ",
+                "*     * "
+        ));
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                "*       ",
+                "  ***** "
+        ));
+        System.out.println();
+
+        // =========================
+        // UC4: Using Array + Loop
+        // =========================
+        System.out.println("UC4 Output:");
+
+        String[] bannerUC4 = new String[7];
+
+        bannerUC4[0] = " *****    *****    ******    ***** ";
+        bannerUC4[1] = "*     *  *     *  *     *  *     *";
+        bannerUC4[2] = "*     *  *     *  *     *  *";
+        bannerUC4[3] = "*     *  *     *   ******    ***** ";
+        bannerUC4[4] = "*     *  *     *  *               *";
+        bannerUC4[5] = "*     *  *     *  *         *     *";
+        bannerUC4[6] = " *****    *****   *          ***** ";
+
+        for (String line : bannerUC4) {
+            System.out.println(line);
+        }
+
+        System.out.println();
+
+        // =========================
+        // UC5: Inline Array Initialization
+        // =========================
+        System.out.println("UC5 Output:");
+
+        String[] bannerUC5 = {
+
+                String.join(" ",
+                        " *****  ",
+                        " *****  ",
+                        " ****** ",
+                        "  ***** "
+                ),
+
+                String.join(" ",
+                        "*     * ",
+                        "*     * ",
+                        "*     * ",
+                        "*     * "
+                ),
+
+                String.join(" ",
+                        "*     * ",
+                        "*     * ",
+                        "*     * ",
+                        "*       "
+                ),
+
+                String.join(" ",
+                        "*     * ",
+                        "*     * ",
+                        " ****** ",
+                        "  ***** "
+                ),
+
+                String.join(" ",
+                        "*     * ",
+                        "*     * ",
+                        "*       ",
+                        "       *"
+                ),
+
+                String.join(" ",
+                        "*     * ",
+                        "*     * ",
+                        "*       ",
+                        "*     * "
+                ),
+
+                String.join(" ",
+                        " *****  ",
+                        " *****  ",
+                        "*       ",
+                        "  ***** "
+                )
+        };
+
+        for (String line : bannerUC5) {
+            System.out.println(line);
+        }
     }
 }
